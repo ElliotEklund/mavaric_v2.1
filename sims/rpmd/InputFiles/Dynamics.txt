@@ -1,0 +1,8 @@
+Run Dynamics:1
+Run Time:5
+Time Step:0.01
+Read Trajectories:1
+Compute CQQ:1
+Check Energy Conservation:1
+Conservation Tolerance:0.1
+Interval:10

@@ -1,0 +1,5 @@
+States:2
+ElecBeads:4
+x step size:1.3
+p step size:1.3
+alpha:1

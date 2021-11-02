@@ -1,0 +1,4 @@
+#! /bin/bash
+ROOT='/Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/'
+SIM='rpmd'
+mpirun -np 1 ./bin/rpmd $ROOT $SIM
