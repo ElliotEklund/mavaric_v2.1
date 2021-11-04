@@ -1,13 +1,13 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.15.4)
 
-set(MACHINE "MAC")
+set(MACHINE "ASTRA")
 
 if(${MACHINE} STREQUAL "MAC")
   set(ROOT "/Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC")
   set(BOOST "/Users/ellioteklund/Downloads")
 elseif(${MACHINE} STREQUAL "ASTRA")
   set(ROOT "/home/fs01/ece52/MAVARIC-MTS/MAVARIC")
-  set(BOOST "/home/fs01/ece52/MAVARIC_MTS")
+  set(BOOST_DIR $ENV{BOOST_INC})
 endif()
 
 # set the project name
@@ -16,7 +16,6 @@ set(CMAKE_CXX_STANDARD 98)
 set(CMAKE_CXX_COMPILER mpic++)
 
 #if(${MACHINE} STREQUAL "MAC")
-    set(BOOST_DIR "${BOOST}/boost_1_72_0")
     set(EQUILIBRIUM_DIR "${ROOT}/sims/rpmd/equilibrium")
     set(SAMPLING_DIR "${ROOT}/sims/rpmd/sampling")
     set(DYNAMICS_DIR "${ROOT}/sims/rpmd/dynamics")
