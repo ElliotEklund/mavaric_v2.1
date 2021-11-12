@@ -1,38 +1,29 @@
 cmake_minimum_required(VERSION 3.15.4)
 
-set(MACHINE "ASTRA")
-
-if(${MACHINE} STREQUAL "MAC")
-  set(ROOT "/Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC")
-  set(BOOST "/Users/ellioteklund/Downloads")
-elseif(${MACHINE} STREQUAL "ASTRA")
-  set(ROOT "/home/fs01/ece52/MAVARIC-MTS/MAVARIC")
-  set(BOOST_DIR $ENV{BOOST_INC})
-endif()
+string(REPLACE "/sims/rpmd" "" ROOT ${CMAKE_CURRENT_LIST_DIR})
+set(BOOST_DIR $ENV{BOOST_INC})
 
 # set the project name
 project(mavaric)
 set(CMAKE_CXX_STANDARD 98)
 set(CMAKE_CXX_COMPILER mpic++)
 
-#if(${MACHINE} STREQUAL "MAC")
-    set(EQUILIBRIUM_DIR "${ROOT}/sims/rpmd/equilibrium")
-    set(SAMPLING_DIR "${ROOT}/sims/rpmd/sampling")
-    set(DYNAMICS_DIR "${ROOT}/sims/rpmd/dynamics")
-    set(HAMILTONIAN_DIR "${ROOT}/src/hamiltonian")
-    set(ESTIMATORS_DIR "${ROOT}/src/estimators")
-    set(FORCES_DIR "${ROOT}/src/forces")
-    set(INTEGRATORS_DIR "${ROOT}/src/integrators")
-    set(MISC_DIR "${ROOT}/src/misc")
-    set(MONTECARLO_DIR "${ROOT}/src/monte_carlo")
-    set(IO_DIR "${ROOT}/src/IO")
-    set(EXECUTABLE_OUTPUT_PATH "${ROOT}/bin")
-    set(CMAKE_CXX_FLAGS "-DMAC")
+set(EQUILIBRIUM_DIR "${ROOT}/sims/rpmd/equilibrium")
+set(SAMPLING_DIR "${ROOT}/sims/rpmd/sampling")
+set(DYNAMICS_DIR "${ROOT}/sims/rpmd/dynamics")
+set(HAMILTONIAN_DIR "${ROOT}/src/hamiltonian")
+set(ESTIMATORS_DIR "${ROOT}/src/estimators")
+set(FORCES_DIR "${ROOT}/src/forces")
+set(INTEGRATORS_DIR "${ROOT}/src/integrators")
+set(MISC_DIR "${ROOT}/src/misc")
+set(MONTECARLO_DIR "${ROOT}/src/monte_carlo")
+set(IO_DIR "${ROOT}/src/IO")
+set(EXECUTABLE_OUTPUT_PATH "${ROOT}/bin")
+set(CMAKE_CXX_FLAGS "-DMAC")
 
 add_definitions( "-DNDEBUG -O3" )
 
 # add the executable
-
 add_executable(rpmd rpmd.cpp
 
     #equilibrium directory

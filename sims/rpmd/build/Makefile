@@ -48,10 +48,10 @@ RM = /Applications/CMake.app/Contents/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/sims/rpmd
+CMAKE_SOURCE_DIR = /Users/ellioteklund/Desktop/mavaric_v2.1/sims/rpmd
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/sims/rpmd/build
+CMAKE_BINARY_DIR = /Users/ellioteklund/Desktop/mavaric_v2.1/sims/rpmd/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/sims/rpmd/build/CMakeFiles /Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/sims/rpmd/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ellioteklund/Desktop/mavaric_v2.1/sims/rpmd/build/CMakeFiles /Users/ellioteklund/Desktop/mavaric_v2.1/sims/rpmd/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/sims/rpmd/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ellioteklund/Desktop/mavaric_v2.1/sims/rpmd/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -123,275 +123,275 @@ rpmd/fast:
 	$(MAKE) -f CMakeFiles/rpmd.dir/build.make CMakeFiles/rpmd.dir/build
 .PHONY : rpmd/fast
 
-Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/estimators/rpmd_estimator.o: Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/estimators/rpmd_estimator.cpp.o
+Users/ellioteklund/Desktop/mavaric_v2.1/src/estimators/rpmd_estimator.o: Users/ellioteklund/Desktop/mavaric_v2.1/src/estimators/rpmd_estimator.cpp.o
 
-.PHONY : Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/estimators/rpmd_estimator.o
-
-# target to build an object file
-Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/estimators/rpmd_estimator.cpp.o:
-	$(MAKE) -f CMakeFiles/rpmd.dir/build.make CMakeFiles/rpmd.dir/Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/estimators/rpmd_estimator.cpp.o
-.PHONY : Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/estimators/rpmd_estimator.cpp.o
-
-Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/estimators/rpmd_estimator.i: Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/estimators/rpmd_estimator.cpp.i
-
-.PHONY : Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/estimators/rpmd_estimator.i
-
-# target to preprocess a source file
-Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/estimators/rpmd_estimator.cpp.i:
-	$(MAKE) -f CMakeFiles/rpmd.dir/build.make CMakeFiles/rpmd.dir/Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/estimators/rpmd_estimator.cpp.i
-.PHONY : Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/estimators/rpmd_estimator.cpp.i
-
-Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/estimators/rpmd_estimator.s: Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/estimators/rpmd_estimator.cpp.s
-
-.PHONY : Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/estimators/rpmd_estimator.s
-
-# target to generate assembly for a file
-Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/estimators/rpmd_estimator.cpp.s:
-	$(MAKE) -f CMakeFiles/rpmd.dir/build.make CMakeFiles/rpmd.dir/Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/estimators/rpmd_estimator.cpp.s
-.PHONY : Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/estimators/rpmd_estimator.cpp.s
-
-Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/forces/dSpring_dQ.o: Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/forces/dSpring_dQ.cpp.o
-
-.PHONY : Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/forces/dSpring_dQ.o
+.PHONY : Users/ellioteklund/Desktop/mavaric_v2.1/src/estimators/rpmd_estimator.o
 
 # target to build an object file
-Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/forces/dSpring_dQ.cpp.o:
-	$(MAKE) -f CMakeFiles/rpmd.dir/build.make CMakeFiles/rpmd.dir/Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/forces/dSpring_dQ.cpp.o
-.PHONY : Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/forces/dSpring_dQ.cpp.o
+Users/ellioteklund/Desktop/mavaric_v2.1/src/estimators/rpmd_estimator.cpp.o:
+	$(MAKE) -f CMakeFiles/rpmd.dir/build.make CMakeFiles/rpmd.dir/Users/ellioteklund/Desktop/mavaric_v2.1/src/estimators/rpmd_estimator.cpp.o
+.PHONY : Users/ellioteklund/Desktop/mavaric_v2.1/src/estimators/rpmd_estimator.cpp.o
 
-Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/forces/dSpring_dQ.i: Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/forces/dSpring_dQ.cpp.i
+Users/ellioteklund/Desktop/mavaric_v2.1/src/estimators/rpmd_estimator.i: Users/ellioteklund/Desktop/mavaric_v2.1/src/estimators/rpmd_estimator.cpp.i
 
-.PHONY : Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/forces/dSpring_dQ.i
+.PHONY : Users/ellioteklund/Desktop/mavaric_v2.1/src/estimators/rpmd_estimator.i
 
 # target to preprocess a source file
-Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/forces/dSpring_dQ.cpp.i:
-	$(MAKE) -f CMakeFiles/rpmd.dir/build.make CMakeFiles/rpmd.dir/Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/forces/dSpring_dQ.cpp.i
-.PHONY : Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/forces/dSpring_dQ.cpp.i
+Users/ellioteklund/Desktop/mavaric_v2.1/src/estimators/rpmd_estimator.cpp.i:
+	$(MAKE) -f CMakeFiles/rpmd.dir/build.make CMakeFiles/rpmd.dir/Users/ellioteklund/Desktop/mavaric_v2.1/src/estimators/rpmd_estimator.cpp.i
+.PHONY : Users/ellioteklund/Desktop/mavaric_v2.1/src/estimators/rpmd_estimator.cpp.i
 
-Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/forces/dSpring_dQ.s: Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/forces/dSpring_dQ.cpp.s
+Users/ellioteklund/Desktop/mavaric_v2.1/src/estimators/rpmd_estimator.s: Users/ellioteklund/Desktop/mavaric_v2.1/src/estimators/rpmd_estimator.cpp.s
 
-.PHONY : Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/forces/dSpring_dQ.s
+.PHONY : Users/ellioteklund/Desktop/mavaric_v2.1/src/estimators/rpmd_estimator.s
 
 # target to generate assembly for a file
-Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/forces/dSpring_dQ.cpp.s:
-	$(MAKE) -f CMakeFiles/rpmd.dir/build.make CMakeFiles/rpmd.dir/Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/forces/dSpring_dQ.cpp.s
-.PHONY : Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/forces/dSpring_dQ.cpp.s
+Users/ellioteklund/Desktop/mavaric_v2.1/src/estimators/rpmd_estimator.cpp.s:
+	$(MAKE) -f CMakeFiles/rpmd.dir/build.make CMakeFiles/rpmd.dir/Users/ellioteklund/Desktop/mavaric_v2.1/src/estimators/rpmd_estimator.cpp.s
+.PHONY : Users/ellioteklund/Desktop/mavaric_v2.1/src/estimators/rpmd_estimator.cpp.s
 
-Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/forces/dStateIndep_dQ.o: Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/forces/dStateIndep_dQ.cpp.o
+Users/ellioteklund/Desktop/mavaric_v2.1/src/forces/dSpring_dQ.o: Users/ellioteklund/Desktop/mavaric_v2.1/src/forces/dSpring_dQ.cpp.o
 
-.PHONY : Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/forces/dStateIndep_dQ.o
+.PHONY : Users/ellioteklund/Desktop/mavaric_v2.1/src/forces/dSpring_dQ.o
 
 # target to build an object file
-Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/forces/dStateIndep_dQ.cpp.o:
-	$(MAKE) -f CMakeFiles/rpmd.dir/build.make CMakeFiles/rpmd.dir/Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/forces/dStateIndep_dQ.cpp.o
-.PHONY : Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/forces/dStateIndep_dQ.cpp.o
+Users/ellioteklund/Desktop/mavaric_v2.1/src/forces/dSpring_dQ.cpp.o:
+	$(MAKE) -f CMakeFiles/rpmd.dir/build.make CMakeFiles/rpmd.dir/Users/ellioteklund/Desktop/mavaric_v2.1/src/forces/dSpring_dQ.cpp.o
+.PHONY : Users/ellioteklund/Desktop/mavaric_v2.1/src/forces/dSpring_dQ.cpp.o
 
-Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/forces/dStateIndep_dQ.i: Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/forces/dStateIndep_dQ.cpp.i
+Users/ellioteklund/Desktop/mavaric_v2.1/src/forces/dSpring_dQ.i: Users/ellioteklund/Desktop/mavaric_v2.1/src/forces/dSpring_dQ.cpp.i
 
-.PHONY : Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/forces/dStateIndep_dQ.i
+.PHONY : Users/ellioteklund/Desktop/mavaric_v2.1/src/forces/dSpring_dQ.i
 
 # target to preprocess a source file
-Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/forces/dStateIndep_dQ.cpp.i:
-	$(MAKE) -f CMakeFiles/rpmd.dir/build.make CMakeFiles/rpmd.dir/Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/forces/dStateIndep_dQ.cpp.i
-.PHONY : Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/forces/dStateIndep_dQ.cpp.i
+Users/ellioteklund/Desktop/mavaric_v2.1/src/forces/dSpring_dQ.cpp.i:
+	$(MAKE) -f CMakeFiles/rpmd.dir/build.make CMakeFiles/rpmd.dir/Users/ellioteklund/Desktop/mavaric_v2.1/src/forces/dSpring_dQ.cpp.i
+.PHONY : Users/ellioteklund/Desktop/mavaric_v2.1/src/forces/dSpring_dQ.cpp.i
 
-Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/forces/dStateIndep_dQ.s: Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/forces/dStateIndep_dQ.cpp.s
+Users/ellioteklund/Desktop/mavaric_v2.1/src/forces/dSpring_dQ.s: Users/ellioteklund/Desktop/mavaric_v2.1/src/forces/dSpring_dQ.cpp.s
 
-.PHONY : Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/forces/dStateIndep_dQ.s
+.PHONY : Users/ellioteklund/Desktop/mavaric_v2.1/src/forces/dSpring_dQ.s
 
 # target to generate assembly for a file
-Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/forces/dStateIndep_dQ.cpp.s:
-	$(MAKE) -f CMakeFiles/rpmd.dir/build.make CMakeFiles/rpmd.dir/Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/forces/dStateIndep_dQ.cpp.s
-.PHONY : Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/forces/dStateIndep_dQ.cpp.s
+Users/ellioteklund/Desktop/mavaric_v2.1/src/forces/dSpring_dQ.cpp.s:
+	$(MAKE) -f CMakeFiles/rpmd.dir/build.make CMakeFiles/rpmd.dir/Users/ellioteklund/Desktop/mavaric_v2.1/src/forces/dSpring_dQ.cpp.s
+.PHONY : Users/ellioteklund/Desktop/mavaric_v2.1/src/forces/dSpring_dQ.cpp.s
 
-Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/forces/rpmd_force.o: Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/forces/rpmd_force.cpp.o
+Users/ellioteklund/Desktop/mavaric_v2.1/src/forces/dStateIndep_dQ.o: Users/ellioteklund/Desktop/mavaric_v2.1/src/forces/dStateIndep_dQ.cpp.o
 
-.PHONY : Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/forces/rpmd_force.o
+.PHONY : Users/ellioteklund/Desktop/mavaric_v2.1/src/forces/dStateIndep_dQ.o
 
 # target to build an object file
-Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/forces/rpmd_force.cpp.o:
-	$(MAKE) -f CMakeFiles/rpmd.dir/build.make CMakeFiles/rpmd.dir/Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/forces/rpmd_force.cpp.o
-.PHONY : Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/forces/rpmd_force.cpp.o
+Users/ellioteklund/Desktop/mavaric_v2.1/src/forces/dStateIndep_dQ.cpp.o:
+	$(MAKE) -f CMakeFiles/rpmd.dir/build.make CMakeFiles/rpmd.dir/Users/ellioteklund/Desktop/mavaric_v2.1/src/forces/dStateIndep_dQ.cpp.o
+.PHONY : Users/ellioteklund/Desktop/mavaric_v2.1/src/forces/dStateIndep_dQ.cpp.o
 
-Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/forces/rpmd_force.i: Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/forces/rpmd_force.cpp.i
+Users/ellioteklund/Desktop/mavaric_v2.1/src/forces/dStateIndep_dQ.i: Users/ellioteklund/Desktop/mavaric_v2.1/src/forces/dStateIndep_dQ.cpp.i
 
-.PHONY : Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/forces/rpmd_force.i
+.PHONY : Users/ellioteklund/Desktop/mavaric_v2.1/src/forces/dStateIndep_dQ.i
 
 # target to preprocess a source file
-Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/forces/rpmd_force.cpp.i:
-	$(MAKE) -f CMakeFiles/rpmd.dir/build.make CMakeFiles/rpmd.dir/Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/forces/rpmd_force.cpp.i
-.PHONY : Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/forces/rpmd_force.cpp.i
+Users/ellioteklund/Desktop/mavaric_v2.1/src/forces/dStateIndep_dQ.cpp.i:
+	$(MAKE) -f CMakeFiles/rpmd.dir/build.make CMakeFiles/rpmd.dir/Users/ellioteklund/Desktop/mavaric_v2.1/src/forces/dStateIndep_dQ.cpp.i
+.PHONY : Users/ellioteklund/Desktop/mavaric_v2.1/src/forces/dStateIndep_dQ.cpp.i
 
-Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/forces/rpmd_force.s: Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/forces/rpmd_force.cpp.s
+Users/ellioteklund/Desktop/mavaric_v2.1/src/forces/dStateIndep_dQ.s: Users/ellioteklund/Desktop/mavaric_v2.1/src/forces/dStateIndep_dQ.cpp.s
 
-.PHONY : Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/forces/rpmd_force.s
+.PHONY : Users/ellioteklund/Desktop/mavaric_v2.1/src/forces/dStateIndep_dQ.s
 
 # target to generate assembly for a file
-Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/forces/rpmd_force.cpp.s:
-	$(MAKE) -f CMakeFiles/rpmd.dir/build.make CMakeFiles/rpmd.dir/Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/forces/rpmd_force.cpp.s
-.PHONY : Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/forces/rpmd_force.cpp.s
+Users/ellioteklund/Desktop/mavaric_v2.1/src/forces/dStateIndep_dQ.cpp.s:
+	$(MAKE) -f CMakeFiles/rpmd.dir/build.make CMakeFiles/rpmd.dir/Users/ellioteklund/Desktop/mavaric_v2.1/src/forces/dStateIndep_dQ.cpp.s
+.PHONY : Users/ellioteklund/Desktop/mavaric_v2.1/src/forces/dStateIndep_dQ.cpp.s
 
-Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/hamiltonian/SpringEnergy.o: Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/hamiltonian/SpringEnergy.cpp.o
+Users/ellioteklund/Desktop/mavaric_v2.1/src/forces/rpmd_force.o: Users/ellioteklund/Desktop/mavaric_v2.1/src/forces/rpmd_force.cpp.o
 
-.PHONY : Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/hamiltonian/SpringEnergy.o
+.PHONY : Users/ellioteklund/Desktop/mavaric_v2.1/src/forces/rpmd_force.o
 
 # target to build an object file
-Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/hamiltonian/SpringEnergy.cpp.o:
-	$(MAKE) -f CMakeFiles/rpmd.dir/build.make CMakeFiles/rpmd.dir/Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/hamiltonian/SpringEnergy.cpp.o
-.PHONY : Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/hamiltonian/SpringEnergy.cpp.o
+Users/ellioteklund/Desktop/mavaric_v2.1/src/forces/rpmd_force.cpp.o:
+	$(MAKE) -f CMakeFiles/rpmd.dir/build.make CMakeFiles/rpmd.dir/Users/ellioteklund/Desktop/mavaric_v2.1/src/forces/rpmd_force.cpp.o
+.PHONY : Users/ellioteklund/Desktop/mavaric_v2.1/src/forces/rpmd_force.cpp.o
 
-Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/hamiltonian/SpringEnergy.i: Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/hamiltonian/SpringEnergy.cpp.i
+Users/ellioteklund/Desktop/mavaric_v2.1/src/forces/rpmd_force.i: Users/ellioteklund/Desktop/mavaric_v2.1/src/forces/rpmd_force.cpp.i
 
-.PHONY : Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/hamiltonian/SpringEnergy.i
+.PHONY : Users/ellioteklund/Desktop/mavaric_v2.1/src/forces/rpmd_force.i
 
 # target to preprocess a source file
-Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/hamiltonian/SpringEnergy.cpp.i:
-	$(MAKE) -f CMakeFiles/rpmd.dir/build.make CMakeFiles/rpmd.dir/Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/hamiltonian/SpringEnergy.cpp.i
-.PHONY : Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/hamiltonian/SpringEnergy.cpp.i
+Users/ellioteklund/Desktop/mavaric_v2.1/src/forces/rpmd_force.cpp.i:
+	$(MAKE) -f CMakeFiles/rpmd.dir/build.make CMakeFiles/rpmd.dir/Users/ellioteklund/Desktop/mavaric_v2.1/src/forces/rpmd_force.cpp.i
+.PHONY : Users/ellioteklund/Desktop/mavaric_v2.1/src/forces/rpmd_force.cpp.i
 
-Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/hamiltonian/SpringEnergy.s: Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/hamiltonian/SpringEnergy.cpp.s
+Users/ellioteklund/Desktop/mavaric_v2.1/src/forces/rpmd_force.s: Users/ellioteklund/Desktop/mavaric_v2.1/src/forces/rpmd_force.cpp.s
 
-.PHONY : Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/hamiltonian/SpringEnergy.s
+.PHONY : Users/ellioteklund/Desktop/mavaric_v2.1/src/forces/rpmd_force.s
 
 # target to generate assembly for a file
-Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/hamiltonian/SpringEnergy.cpp.s:
-	$(MAKE) -f CMakeFiles/rpmd.dir/build.make CMakeFiles/rpmd.dir/Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/hamiltonian/SpringEnergy.cpp.s
-.PHONY : Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/hamiltonian/SpringEnergy.cpp.s
+Users/ellioteklund/Desktop/mavaric_v2.1/src/forces/rpmd_force.cpp.s:
+	$(MAKE) -f CMakeFiles/rpmd.dir/build.make CMakeFiles/rpmd.dir/Users/ellioteklund/Desktop/mavaric_v2.1/src/forces/rpmd_force.cpp.s
+.PHONY : Users/ellioteklund/Desktop/mavaric_v2.1/src/forces/rpmd_force.cpp.s
 
-Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/hamiltonian/StateIndepPot.o: Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/hamiltonian/StateIndepPot.cpp.o
+Users/ellioteklund/Desktop/mavaric_v2.1/src/hamiltonian/SpringEnergy.o: Users/ellioteklund/Desktop/mavaric_v2.1/src/hamiltonian/SpringEnergy.cpp.o
 
-.PHONY : Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/hamiltonian/StateIndepPot.o
+.PHONY : Users/ellioteklund/Desktop/mavaric_v2.1/src/hamiltonian/SpringEnergy.o
 
 # target to build an object file
-Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/hamiltonian/StateIndepPot.cpp.o:
-	$(MAKE) -f CMakeFiles/rpmd.dir/build.make CMakeFiles/rpmd.dir/Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/hamiltonian/StateIndepPot.cpp.o
-.PHONY : Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/hamiltonian/StateIndepPot.cpp.o
+Users/ellioteklund/Desktop/mavaric_v2.1/src/hamiltonian/SpringEnergy.cpp.o:
+	$(MAKE) -f CMakeFiles/rpmd.dir/build.make CMakeFiles/rpmd.dir/Users/ellioteklund/Desktop/mavaric_v2.1/src/hamiltonian/SpringEnergy.cpp.o
+.PHONY : Users/ellioteklund/Desktop/mavaric_v2.1/src/hamiltonian/SpringEnergy.cpp.o
 
-Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/hamiltonian/StateIndepPot.i: Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/hamiltonian/StateIndepPot.cpp.i
+Users/ellioteklund/Desktop/mavaric_v2.1/src/hamiltonian/SpringEnergy.i: Users/ellioteklund/Desktop/mavaric_v2.1/src/hamiltonian/SpringEnergy.cpp.i
 
-.PHONY : Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/hamiltonian/StateIndepPot.i
+.PHONY : Users/ellioteklund/Desktop/mavaric_v2.1/src/hamiltonian/SpringEnergy.i
 
 # target to preprocess a source file
-Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/hamiltonian/StateIndepPot.cpp.i:
-	$(MAKE) -f CMakeFiles/rpmd.dir/build.make CMakeFiles/rpmd.dir/Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/hamiltonian/StateIndepPot.cpp.i
-.PHONY : Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/hamiltonian/StateIndepPot.cpp.i
+Users/ellioteklund/Desktop/mavaric_v2.1/src/hamiltonian/SpringEnergy.cpp.i:
+	$(MAKE) -f CMakeFiles/rpmd.dir/build.make CMakeFiles/rpmd.dir/Users/ellioteklund/Desktop/mavaric_v2.1/src/hamiltonian/SpringEnergy.cpp.i
+.PHONY : Users/ellioteklund/Desktop/mavaric_v2.1/src/hamiltonian/SpringEnergy.cpp.i
 
-Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/hamiltonian/StateIndepPot.s: Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/hamiltonian/StateIndepPot.cpp.s
+Users/ellioteklund/Desktop/mavaric_v2.1/src/hamiltonian/SpringEnergy.s: Users/ellioteklund/Desktop/mavaric_v2.1/src/hamiltonian/SpringEnergy.cpp.s
 
-.PHONY : Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/hamiltonian/StateIndepPot.s
+.PHONY : Users/ellioteklund/Desktop/mavaric_v2.1/src/hamiltonian/SpringEnergy.s
 
 # target to generate assembly for a file
-Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/hamiltonian/StateIndepPot.cpp.s:
-	$(MAKE) -f CMakeFiles/rpmd.dir/build.make CMakeFiles/rpmd.dir/Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/hamiltonian/StateIndepPot.cpp.s
-.PHONY : Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/hamiltonian/StateIndepPot.cpp.s
+Users/ellioteklund/Desktop/mavaric_v2.1/src/hamiltonian/SpringEnergy.cpp.s:
+	$(MAKE) -f CMakeFiles/rpmd.dir/build.make CMakeFiles/rpmd.dir/Users/ellioteklund/Desktop/mavaric_v2.1/src/hamiltonian/SpringEnergy.cpp.s
+.PHONY : Users/ellioteklund/Desktop/mavaric_v2.1/src/hamiltonian/SpringEnergy.cpp.s
 
-Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/hamiltonian/rpmd_ham.o: Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/hamiltonian/rpmd_ham.cpp.o
+Users/ellioteklund/Desktop/mavaric_v2.1/src/hamiltonian/StateIndepPot.o: Users/ellioteklund/Desktop/mavaric_v2.1/src/hamiltonian/StateIndepPot.cpp.o
 
-.PHONY : Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/hamiltonian/rpmd_ham.o
+.PHONY : Users/ellioteklund/Desktop/mavaric_v2.1/src/hamiltonian/StateIndepPot.o
 
 # target to build an object file
-Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/hamiltonian/rpmd_ham.cpp.o:
-	$(MAKE) -f CMakeFiles/rpmd.dir/build.make CMakeFiles/rpmd.dir/Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/hamiltonian/rpmd_ham.cpp.o
-.PHONY : Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/hamiltonian/rpmd_ham.cpp.o
+Users/ellioteklund/Desktop/mavaric_v2.1/src/hamiltonian/StateIndepPot.cpp.o:
+	$(MAKE) -f CMakeFiles/rpmd.dir/build.make CMakeFiles/rpmd.dir/Users/ellioteklund/Desktop/mavaric_v2.1/src/hamiltonian/StateIndepPot.cpp.o
+.PHONY : Users/ellioteklund/Desktop/mavaric_v2.1/src/hamiltonian/StateIndepPot.cpp.o
 
-Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/hamiltonian/rpmd_ham.i: Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/hamiltonian/rpmd_ham.cpp.i
+Users/ellioteklund/Desktop/mavaric_v2.1/src/hamiltonian/StateIndepPot.i: Users/ellioteklund/Desktop/mavaric_v2.1/src/hamiltonian/StateIndepPot.cpp.i
 
-.PHONY : Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/hamiltonian/rpmd_ham.i
+.PHONY : Users/ellioteklund/Desktop/mavaric_v2.1/src/hamiltonian/StateIndepPot.i
 
 # target to preprocess a source file
-Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/hamiltonian/rpmd_ham.cpp.i:
-	$(MAKE) -f CMakeFiles/rpmd.dir/build.make CMakeFiles/rpmd.dir/Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/hamiltonian/rpmd_ham.cpp.i
-.PHONY : Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/hamiltonian/rpmd_ham.cpp.i
+Users/ellioteklund/Desktop/mavaric_v2.1/src/hamiltonian/StateIndepPot.cpp.i:
+	$(MAKE) -f CMakeFiles/rpmd.dir/build.make CMakeFiles/rpmd.dir/Users/ellioteklund/Desktop/mavaric_v2.1/src/hamiltonian/StateIndepPot.cpp.i
+.PHONY : Users/ellioteklund/Desktop/mavaric_v2.1/src/hamiltonian/StateIndepPot.cpp.i
 
-Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/hamiltonian/rpmd_ham.s: Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/hamiltonian/rpmd_ham.cpp.s
+Users/ellioteklund/Desktop/mavaric_v2.1/src/hamiltonian/StateIndepPot.s: Users/ellioteklund/Desktop/mavaric_v2.1/src/hamiltonian/StateIndepPot.cpp.s
 
-.PHONY : Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/hamiltonian/rpmd_ham.s
+.PHONY : Users/ellioteklund/Desktop/mavaric_v2.1/src/hamiltonian/StateIndepPot.s
 
 # target to generate assembly for a file
-Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/hamiltonian/rpmd_ham.cpp.s:
-	$(MAKE) -f CMakeFiles/rpmd.dir/build.make CMakeFiles/rpmd.dir/Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/hamiltonian/rpmd_ham.cpp.s
-.PHONY : Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/hamiltonian/rpmd_ham.cpp.s
+Users/ellioteklund/Desktop/mavaric_v2.1/src/hamiltonian/StateIndepPot.cpp.s:
+	$(MAKE) -f CMakeFiles/rpmd.dir/build.make CMakeFiles/rpmd.dir/Users/ellioteklund/Desktop/mavaric_v2.1/src/hamiltonian/StateIndepPot.cpp.s
+.PHONY : Users/ellioteklund/Desktop/mavaric_v2.1/src/hamiltonian/StateIndepPot.cpp.s
 
-Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/integrators/rpmd_vv.o: Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/integrators/rpmd_vv.cpp.o
+Users/ellioteklund/Desktop/mavaric_v2.1/src/hamiltonian/rpmd_ham.o: Users/ellioteklund/Desktop/mavaric_v2.1/src/hamiltonian/rpmd_ham.cpp.o
 
-.PHONY : Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/integrators/rpmd_vv.o
+.PHONY : Users/ellioteklund/Desktop/mavaric_v2.1/src/hamiltonian/rpmd_ham.o
 
 # target to build an object file
-Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/integrators/rpmd_vv.cpp.o:
-	$(MAKE) -f CMakeFiles/rpmd.dir/build.make CMakeFiles/rpmd.dir/Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/integrators/rpmd_vv.cpp.o
-.PHONY : Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/integrators/rpmd_vv.cpp.o
+Users/ellioteklund/Desktop/mavaric_v2.1/src/hamiltonian/rpmd_ham.cpp.o:
+	$(MAKE) -f CMakeFiles/rpmd.dir/build.make CMakeFiles/rpmd.dir/Users/ellioteklund/Desktop/mavaric_v2.1/src/hamiltonian/rpmd_ham.cpp.o
+.PHONY : Users/ellioteklund/Desktop/mavaric_v2.1/src/hamiltonian/rpmd_ham.cpp.o
 
-Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/integrators/rpmd_vv.i: Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/integrators/rpmd_vv.cpp.i
+Users/ellioteklund/Desktop/mavaric_v2.1/src/hamiltonian/rpmd_ham.i: Users/ellioteklund/Desktop/mavaric_v2.1/src/hamiltonian/rpmd_ham.cpp.i
 
-.PHONY : Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/integrators/rpmd_vv.i
+.PHONY : Users/ellioteklund/Desktop/mavaric_v2.1/src/hamiltonian/rpmd_ham.i
 
 # target to preprocess a source file
-Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/integrators/rpmd_vv.cpp.i:
-	$(MAKE) -f CMakeFiles/rpmd.dir/build.make CMakeFiles/rpmd.dir/Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/integrators/rpmd_vv.cpp.i
-.PHONY : Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/integrators/rpmd_vv.cpp.i
+Users/ellioteklund/Desktop/mavaric_v2.1/src/hamiltonian/rpmd_ham.cpp.i:
+	$(MAKE) -f CMakeFiles/rpmd.dir/build.make CMakeFiles/rpmd.dir/Users/ellioteklund/Desktop/mavaric_v2.1/src/hamiltonian/rpmd_ham.cpp.i
+.PHONY : Users/ellioteklund/Desktop/mavaric_v2.1/src/hamiltonian/rpmd_ham.cpp.i
 
-Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/integrators/rpmd_vv.s: Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/integrators/rpmd_vv.cpp.s
+Users/ellioteklund/Desktop/mavaric_v2.1/src/hamiltonian/rpmd_ham.s: Users/ellioteklund/Desktop/mavaric_v2.1/src/hamiltonian/rpmd_ham.cpp.s
 
-.PHONY : Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/integrators/rpmd_vv.s
+.PHONY : Users/ellioteklund/Desktop/mavaric_v2.1/src/hamiltonian/rpmd_ham.s
 
 # target to generate assembly for a file
-Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/integrators/rpmd_vv.cpp.s:
-	$(MAKE) -f CMakeFiles/rpmd.dir/build.make CMakeFiles/rpmd.dir/Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/integrators/rpmd_vv.cpp.s
-.PHONY : Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/integrators/rpmd_vv.cpp.s
+Users/ellioteklund/Desktop/mavaric_v2.1/src/hamiltonian/rpmd_ham.cpp.s:
+	$(MAKE) -f CMakeFiles/rpmd.dir/build.make CMakeFiles/rpmd.dir/Users/ellioteklund/Desktop/mavaric_v2.1/src/hamiltonian/rpmd_ham.cpp.s
+.PHONY : Users/ellioteklund/Desktop/mavaric_v2.1/src/hamiltonian/rpmd_ham.cpp.s
 
-Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/misc/mpi_wrapper.o: Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/misc/mpi_wrapper.cpp.o
+Users/ellioteklund/Desktop/mavaric_v2.1/src/integrators/rpmd_vv.o: Users/ellioteklund/Desktop/mavaric_v2.1/src/integrators/rpmd_vv.cpp.o
 
-.PHONY : Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/misc/mpi_wrapper.o
+.PHONY : Users/ellioteklund/Desktop/mavaric_v2.1/src/integrators/rpmd_vv.o
 
 # target to build an object file
-Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/misc/mpi_wrapper.cpp.o:
-	$(MAKE) -f CMakeFiles/rpmd.dir/build.make CMakeFiles/rpmd.dir/Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/misc/mpi_wrapper.cpp.o
-.PHONY : Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/misc/mpi_wrapper.cpp.o
+Users/ellioteklund/Desktop/mavaric_v2.1/src/integrators/rpmd_vv.cpp.o:
+	$(MAKE) -f CMakeFiles/rpmd.dir/build.make CMakeFiles/rpmd.dir/Users/ellioteklund/Desktop/mavaric_v2.1/src/integrators/rpmd_vv.cpp.o
+.PHONY : Users/ellioteklund/Desktop/mavaric_v2.1/src/integrators/rpmd_vv.cpp.o
 
-Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/misc/mpi_wrapper.i: Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/misc/mpi_wrapper.cpp.i
+Users/ellioteklund/Desktop/mavaric_v2.1/src/integrators/rpmd_vv.i: Users/ellioteklund/Desktop/mavaric_v2.1/src/integrators/rpmd_vv.cpp.i
 
-.PHONY : Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/misc/mpi_wrapper.i
+.PHONY : Users/ellioteklund/Desktop/mavaric_v2.1/src/integrators/rpmd_vv.i
 
 # target to preprocess a source file
-Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/misc/mpi_wrapper.cpp.i:
-	$(MAKE) -f CMakeFiles/rpmd.dir/build.make CMakeFiles/rpmd.dir/Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/misc/mpi_wrapper.cpp.i
-.PHONY : Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/misc/mpi_wrapper.cpp.i
+Users/ellioteklund/Desktop/mavaric_v2.1/src/integrators/rpmd_vv.cpp.i:
+	$(MAKE) -f CMakeFiles/rpmd.dir/build.make CMakeFiles/rpmd.dir/Users/ellioteklund/Desktop/mavaric_v2.1/src/integrators/rpmd_vv.cpp.i
+.PHONY : Users/ellioteklund/Desktop/mavaric_v2.1/src/integrators/rpmd_vv.cpp.i
 
-Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/misc/mpi_wrapper.s: Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/misc/mpi_wrapper.cpp.s
+Users/ellioteklund/Desktop/mavaric_v2.1/src/integrators/rpmd_vv.s: Users/ellioteklund/Desktop/mavaric_v2.1/src/integrators/rpmd_vv.cpp.s
 
-.PHONY : Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/misc/mpi_wrapper.s
+.PHONY : Users/ellioteklund/Desktop/mavaric_v2.1/src/integrators/rpmd_vv.s
 
 # target to generate assembly for a file
-Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/misc/mpi_wrapper.cpp.s:
-	$(MAKE) -f CMakeFiles/rpmd.dir/build.make CMakeFiles/rpmd.dir/Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/misc/mpi_wrapper.cpp.s
-.PHONY : Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/misc/mpi_wrapper.cpp.s
+Users/ellioteklund/Desktop/mavaric_v2.1/src/integrators/rpmd_vv.cpp.s:
+	$(MAKE) -f CMakeFiles/rpmd.dir/build.make CMakeFiles/rpmd.dir/Users/ellioteklund/Desktop/mavaric_v2.1/src/integrators/rpmd_vv.cpp.s
+.PHONY : Users/ellioteklund/Desktop/mavaric_v2.1/src/integrators/rpmd_vv.cpp.s
 
-Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/monte_carlo/rpmd_system_step.o: Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/monte_carlo/rpmd_system_step.cpp.o
+Users/ellioteklund/Desktop/mavaric_v2.1/src/misc/mpi_wrapper.o: Users/ellioteklund/Desktop/mavaric_v2.1/src/misc/mpi_wrapper.cpp.o
 
-.PHONY : Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/monte_carlo/rpmd_system_step.o
+.PHONY : Users/ellioteklund/Desktop/mavaric_v2.1/src/misc/mpi_wrapper.o
 
 # target to build an object file
-Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/monte_carlo/rpmd_system_step.cpp.o:
-	$(MAKE) -f CMakeFiles/rpmd.dir/build.make CMakeFiles/rpmd.dir/Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/monte_carlo/rpmd_system_step.cpp.o
-.PHONY : Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/monte_carlo/rpmd_system_step.cpp.o
+Users/ellioteklund/Desktop/mavaric_v2.1/src/misc/mpi_wrapper.cpp.o:
+	$(MAKE) -f CMakeFiles/rpmd.dir/build.make CMakeFiles/rpmd.dir/Users/ellioteklund/Desktop/mavaric_v2.1/src/misc/mpi_wrapper.cpp.o
+.PHONY : Users/ellioteklund/Desktop/mavaric_v2.1/src/misc/mpi_wrapper.cpp.o
 
-Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/monte_carlo/rpmd_system_step.i: Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/monte_carlo/rpmd_system_step.cpp.i
+Users/ellioteklund/Desktop/mavaric_v2.1/src/misc/mpi_wrapper.i: Users/ellioteklund/Desktop/mavaric_v2.1/src/misc/mpi_wrapper.cpp.i
 
-.PHONY : Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/monte_carlo/rpmd_system_step.i
+.PHONY : Users/ellioteklund/Desktop/mavaric_v2.1/src/misc/mpi_wrapper.i
 
 # target to preprocess a source file
-Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/monte_carlo/rpmd_system_step.cpp.i:
-	$(MAKE) -f CMakeFiles/rpmd.dir/build.make CMakeFiles/rpmd.dir/Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/monte_carlo/rpmd_system_step.cpp.i
-.PHONY : Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/monte_carlo/rpmd_system_step.cpp.i
+Users/ellioteklund/Desktop/mavaric_v2.1/src/misc/mpi_wrapper.cpp.i:
+	$(MAKE) -f CMakeFiles/rpmd.dir/build.make CMakeFiles/rpmd.dir/Users/ellioteklund/Desktop/mavaric_v2.1/src/misc/mpi_wrapper.cpp.i
+.PHONY : Users/ellioteklund/Desktop/mavaric_v2.1/src/misc/mpi_wrapper.cpp.i
 
-Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/monte_carlo/rpmd_system_step.s: Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/monte_carlo/rpmd_system_step.cpp.s
+Users/ellioteklund/Desktop/mavaric_v2.1/src/misc/mpi_wrapper.s: Users/ellioteklund/Desktop/mavaric_v2.1/src/misc/mpi_wrapper.cpp.s
 
-.PHONY : Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/monte_carlo/rpmd_system_step.s
+.PHONY : Users/ellioteklund/Desktop/mavaric_v2.1/src/misc/mpi_wrapper.s
 
 # target to generate assembly for a file
-Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/monte_carlo/rpmd_system_step.cpp.s:
-	$(MAKE) -f CMakeFiles/rpmd.dir/build.make CMakeFiles/rpmd.dir/Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/monte_carlo/rpmd_system_step.cpp.s
-.PHONY : Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/monte_carlo/rpmd_system_step.cpp.s
+Users/ellioteklund/Desktop/mavaric_v2.1/src/misc/mpi_wrapper.cpp.s:
+	$(MAKE) -f CMakeFiles/rpmd.dir/build.make CMakeFiles/rpmd.dir/Users/ellioteklund/Desktop/mavaric_v2.1/src/misc/mpi_wrapper.cpp.s
+.PHONY : Users/ellioteklund/Desktop/mavaric_v2.1/src/misc/mpi_wrapper.cpp.s
+
+Users/ellioteklund/Desktop/mavaric_v2.1/src/monte_carlo/rpmd_system_step.o: Users/ellioteklund/Desktop/mavaric_v2.1/src/monte_carlo/rpmd_system_step.cpp.o
+
+.PHONY : Users/ellioteklund/Desktop/mavaric_v2.1/src/monte_carlo/rpmd_system_step.o
+
+# target to build an object file
+Users/ellioteklund/Desktop/mavaric_v2.1/src/monte_carlo/rpmd_system_step.cpp.o:
+	$(MAKE) -f CMakeFiles/rpmd.dir/build.make CMakeFiles/rpmd.dir/Users/ellioteklund/Desktop/mavaric_v2.1/src/monte_carlo/rpmd_system_step.cpp.o
+.PHONY : Users/ellioteklund/Desktop/mavaric_v2.1/src/monte_carlo/rpmd_system_step.cpp.o
+
+Users/ellioteklund/Desktop/mavaric_v2.1/src/monte_carlo/rpmd_system_step.i: Users/ellioteklund/Desktop/mavaric_v2.1/src/monte_carlo/rpmd_system_step.cpp.i
+
+.PHONY : Users/ellioteklund/Desktop/mavaric_v2.1/src/monte_carlo/rpmd_system_step.i
+
+# target to preprocess a source file
+Users/ellioteklund/Desktop/mavaric_v2.1/src/monte_carlo/rpmd_system_step.cpp.i:
+	$(MAKE) -f CMakeFiles/rpmd.dir/build.make CMakeFiles/rpmd.dir/Users/ellioteklund/Desktop/mavaric_v2.1/src/monte_carlo/rpmd_system_step.cpp.i
+.PHONY : Users/ellioteklund/Desktop/mavaric_v2.1/src/monte_carlo/rpmd_system_step.cpp.i
+
+Users/ellioteklund/Desktop/mavaric_v2.1/src/monte_carlo/rpmd_system_step.s: Users/ellioteklund/Desktop/mavaric_v2.1/src/monte_carlo/rpmd_system_step.cpp.s
+
+.PHONY : Users/ellioteklund/Desktop/mavaric_v2.1/src/monte_carlo/rpmd_system_step.s
+
+# target to generate assembly for a file
+Users/ellioteklund/Desktop/mavaric_v2.1/src/monte_carlo/rpmd_system_step.cpp.s:
+	$(MAKE) -f CMakeFiles/rpmd.dir/build.make CMakeFiles/rpmd.dir/Users/ellioteklund/Desktop/mavaric_v2.1/src/monte_carlo/rpmd_system_step.cpp.s
+.PHONY : Users/ellioteklund/Desktop/mavaric_v2.1/src/monte_carlo/rpmd_system_step.cpp.s
 
 dynamics/dynamics_rpmd.o: dynamics/dynamics_rpmd.cpp.o
 
@@ -645,36 +645,36 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... rpmd"
-	@echo "... Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/estimators/rpmd_estimator.o"
-	@echo "... Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/estimators/rpmd_estimator.i"
-	@echo "... Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/estimators/rpmd_estimator.s"
-	@echo "... Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/forces/dSpring_dQ.o"
-	@echo "... Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/forces/dSpring_dQ.i"
-	@echo "... Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/forces/dSpring_dQ.s"
-	@echo "... Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/forces/dStateIndep_dQ.o"
-	@echo "... Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/forces/dStateIndep_dQ.i"
-	@echo "... Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/forces/dStateIndep_dQ.s"
-	@echo "... Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/forces/rpmd_force.o"
-	@echo "... Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/forces/rpmd_force.i"
-	@echo "... Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/forces/rpmd_force.s"
-	@echo "... Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/hamiltonian/SpringEnergy.o"
-	@echo "... Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/hamiltonian/SpringEnergy.i"
-	@echo "... Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/hamiltonian/SpringEnergy.s"
-	@echo "... Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/hamiltonian/StateIndepPot.o"
-	@echo "... Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/hamiltonian/StateIndepPot.i"
-	@echo "... Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/hamiltonian/StateIndepPot.s"
-	@echo "... Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/hamiltonian/rpmd_ham.o"
-	@echo "... Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/hamiltonian/rpmd_ham.i"
-	@echo "... Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/hamiltonian/rpmd_ham.s"
-	@echo "... Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/integrators/rpmd_vv.o"
-	@echo "... Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/integrators/rpmd_vv.i"
-	@echo "... Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/integrators/rpmd_vv.s"
-	@echo "... Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/misc/mpi_wrapper.o"
-	@echo "... Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/misc/mpi_wrapper.i"
-	@echo "... Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/misc/mpi_wrapper.s"
-	@echo "... Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/monte_carlo/rpmd_system_step.o"
-	@echo "... Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/monte_carlo/rpmd_system_step.i"
-	@echo "... Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/src/monte_carlo/rpmd_system_step.s"
+	@echo "... Users/ellioteklund/Desktop/mavaric_v2.1/src/estimators/rpmd_estimator.o"
+	@echo "... Users/ellioteklund/Desktop/mavaric_v2.1/src/estimators/rpmd_estimator.i"
+	@echo "... Users/ellioteklund/Desktop/mavaric_v2.1/src/estimators/rpmd_estimator.s"
+	@echo "... Users/ellioteklund/Desktop/mavaric_v2.1/src/forces/dSpring_dQ.o"
+	@echo "... Users/ellioteklund/Desktop/mavaric_v2.1/src/forces/dSpring_dQ.i"
+	@echo "... Users/ellioteklund/Desktop/mavaric_v2.1/src/forces/dSpring_dQ.s"
+	@echo "... Users/ellioteklund/Desktop/mavaric_v2.1/src/forces/dStateIndep_dQ.o"
+	@echo "... Users/ellioteklund/Desktop/mavaric_v2.1/src/forces/dStateIndep_dQ.i"
+	@echo "... Users/ellioteklund/Desktop/mavaric_v2.1/src/forces/dStateIndep_dQ.s"
+	@echo "... Users/ellioteklund/Desktop/mavaric_v2.1/src/forces/rpmd_force.o"
+	@echo "... Users/ellioteklund/Desktop/mavaric_v2.1/src/forces/rpmd_force.i"
+	@echo "... Users/ellioteklund/Desktop/mavaric_v2.1/src/forces/rpmd_force.s"
+	@echo "... Users/ellioteklund/Desktop/mavaric_v2.1/src/hamiltonian/SpringEnergy.o"
+	@echo "... Users/ellioteklund/Desktop/mavaric_v2.1/src/hamiltonian/SpringEnergy.i"
+	@echo "... Users/ellioteklund/Desktop/mavaric_v2.1/src/hamiltonian/SpringEnergy.s"
+	@echo "... Users/ellioteklund/Desktop/mavaric_v2.1/src/hamiltonian/StateIndepPot.o"
+	@echo "... Users/ellioteklund/Desktop/mavaric_v2.1/src/hamiltonian/StateIndepPot.i"
+	@echo "... Users/ellioteklund/Desktop/mavaric_v2.1/src/hamiltonian/StateIndepPot.s"
+	@echo "... Users/ellioteklund/Desktop/mavaric_v2.1/src/hamiltonian/rpmd_ham.o"
+	@echo "... Users/ellioteklund/Desktop/mavaric_v2.1/src/hamiltonian/rpmd_ham.i"
+	@echo "... Users/ellioteklund/Desktop/mavaric_v2.1/src/hamiltonian/rpmd_ham.s"
+	@echo "... Users/ellioteklund/Desktop/mavaric_v2.1/src/integrators/rpmd_vv.o"
+	@echo "... Users/ellioteklund/Desktop/mavaric_v2.1/src/integrators/rpmd_vv.i"
+	@echo "... Users/ellioteklund/Desktop/mavaric_v2.1/src/integrators/rpmd_vv.s"
+	@echo "... Users/ellioteklund/Desktop/mavaric_v2.1/src/misc/mpi_wrapper.o"
+	@echo "... Users/ellioteklund/Desktop/mavaric_v2.1/src/misc/mpi_wrapper.i"
+	@echo "... Users/ellioteklund/Desktop/mavaric_v2.1/src/misc/mpi_wrapper.s"
+	@echo "... Users/ellioteklund/Desktop/mavaric_v2.1/src/monte_carlo/rpmd_system_step.o"
+	@echo "... Users/ellioteklund/Desktop/mavaric_v2.1/src/monte_carlo/rpmd_system_step.i"
+	@echo "... Users/ellioteklund/Desktop/mavaric_v2.1/src/monte_carlo/rpmd_system_step.s"
 	@echo "... dynamics/dynamics_rpmd.o"
 	@echo "... dynamics/dynamics_rpmd.i"
 	@echo "... dynamics/dynamics_rpmd.s"

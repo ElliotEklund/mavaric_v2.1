@@ -1,4 +1,4 @@
-# Install script for directory: /Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/sims/rpmd
+# Install script for directory: /Users/ellioteklund/Desktop/mavaric_v2.1/sims/rpmd
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/sims/rpmd/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/ellioteklund/Desktop/mavaric_v2.1/sims/rpmd/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

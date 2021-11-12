@@ -9,15 +9,15 @@
 #SBATCH -e %x.e%j
 #SBATCH -x c0055
 #SBATCH --mail-type=ALL
-#SBATCH --mail-user=ece52@cornell.edu
 
 # Enter the working directory
 cd ${SLURM_SUBMIT_DIR}
 echo "starting $SLURM_JOB_ID at `date` on `hostname`"
 echo "$USER"
 echo $SLURM_SUBMIT_DIR
-NUMNODES=60
-SIMDIR='/home/fs01/ece52/MAVARIC_v2.0/sims/nrpmd/'
+NUMNODES=1
+SIMDIR='/home/fs01/netID/mavaric_v2.1/sims/rpmd/'
+SIM='rpmd'
 
 # Make a temp directory
 /usr/bin/mkdir -p /tmp/$USER/$SLURM_JOB_ID
@@ -25,7 +25,7 @@ SIMDIR='/home/fs01/ece52/MAVARIC_v2.0/sims/nrpmd/'
 # Copy files to the temp directory
 cp $SLURM_SUBMIT_DIR/bin/rpmd     /tmp/$USER/$SLURM_JOB_ID/.
 
-mpirun -np $NUMNODES /home/fs01/ece52/MAVARIC_v2.0/bin/rpmd $SIMDIR
+mpirun -np $NUMNODES /home/fs01/netID/mavaric_v2.1/bin/rpmd $SIMDIR $SIM
 
 # Copy output files back from the temp directory to working directory
 rsync -r /tmp/$USER/$SLURM_JOB_ID/ $SLURM_SUBMIT_DIR/
