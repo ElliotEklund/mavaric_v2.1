@@ -4,5 +4,5 @@ Time Step:0.01
 Read Trajectories:1
 Compute CQQ:1
 Check Energy Conservation:1
-Conservation Tolerance:0.1
+Conservation Tolerance:10
 Interval:10

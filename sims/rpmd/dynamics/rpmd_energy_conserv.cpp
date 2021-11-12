@@ -35,7 +35,6 @@ int rpmd_energy_conserv::compute_energy(int num_trajs,int nuc_beads,double dt,
     double energy_0 = H.get_energy_dyn(mass,Qtraj,Ptraj);
     int sample = 0;
     while(sample < num_samples && !broken){
-    // for (int sample=0; sample<num_samples; sample++){
       double energy_t = H.get_energy_dyn(mass,Qtraj,Ptraj);
       double fidelity = 100*abs((energy_t - energy_0)/energy_0);
       sample += 1;

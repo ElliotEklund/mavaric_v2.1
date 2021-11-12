@@ -1,7 +1,8 @@
 #include "StateIndepPot.h"
 
 StateIndepPot::StateIndepPot(int num_beads, double mass)
-    :num_beads(num_beads), mass(mass),one_vec(num_beads,1.0)
+    :num_beads(num_beads), mass(mass),one_vec(num_beads,1.0),
+    Q_2(num_beads,0),Q_3(num_beads,0)
 {}
 void StateIndepPot::update_V0(const vector<double> &Q){
 

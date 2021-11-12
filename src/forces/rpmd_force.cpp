@@ -13,20 +13,17 @@ rpmd_force::rpmd_force(int nuc_beads,double mass, double beta)
 }
 
 void rpmd_force::update_dHdP(const vector<double> &P){
-    // noalias(dHdP) = nuc_beads * c * P;
     noalias(dHdP) = c * P;
 }
 void rpmd_force::update_dHdQ(const vector<double> &Q){
     noalias(dVspring_dQ_vec) = dVspring_dQ.get_dSpring_dQ2(Q);
     noalias(dV0_dQ_vec) = dV0_dQ(Q);
-    // noalias(dHdQ) = (dVspring_dQ_vec + dV0_dQ_vec)/nuc_beads;
     noalias(dHdQ) = dVspring_dQ_vec + dV0_dQ_vec;
 }
 vector<double> rpmd_force::dV0_dQ(const vector<double> &Q){
-    // vector<double> QQ = element_prod(Q,Q);
-    // vector<double> QQQ = element_prod(QQ,Q);
-    // return Q + 0.3*QQ + 0.04*QQQ;
-    return Q;
+    vector<double> QQ = element_prod(Q,Q);
+    vector<double> QQQ = element_prod(QQ,Q);
+    return Q + 0.3*QQ + 0.04*QQQ;
 }
 
 const vector<double> & rpmd_force::get_dHdQ(){return dHdQ;}

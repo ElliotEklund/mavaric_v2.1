@@ -2,7 +2,7 @@ import numpy as np
 from numpy import genfromtxt
 import matplotlib.pyplot as plt
 
-file_name = "/Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/sims/rpmd/Output/auto_corr_data.txt"
+file_name = "/Users/ellioteklund/Desktop/mavaric_v2.1/sims/rpmd/Output/auto_corr_data.txt"
 tot_time = 5
 num_trajs = 2000
 
