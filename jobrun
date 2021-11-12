@@ -16,7 +16,7 @@ echo "starting $SLURM_JOB_ID at `date` on `hostname`"
 echo "$USER"
 echo $SLURM_SUBMIT_DIR
 NUMNODES=1
-SIMDIR='/home/fs01/netID/mavaric_v2.1/sims/rpmd/'
+SIMDIR='/home/fs01/netID/mavaric_v2.1/'
 SIM='rpmd'
 
 # Make a temp directory
