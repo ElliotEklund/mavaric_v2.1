@@ -10,8 +10,6 @@
 #include "trajs_io.hpp"
 #include "aggregate.hpp"
 #include "simpson.hpp"
-#include "lyp_funcs.hpp"
-//#include "Dynamics.hpp"
 
 int main(int argc, char ** argv) {
     
