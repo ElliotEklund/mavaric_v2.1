@@ -124,33 +124,6 @@ int main(int argc, char ** argv) {
     beta_nuc = beta/nuc_beads;
     beta_elec = beta/elec_beads;
     
-
-
-
-    int n = 5;
-    double a(0), b(5);
-    double delta = (b-a)/n;
-    vector<double> grid(n);
-    vector<double> f(n);
-
-    for(int i=0; i<n; i++){
-        grid(i) = i*delta;
-        f(i) = sin(grid(i));
-    }
-
-    double I = simp(delta,n,f);
-    std::cout << I << std::endl;
-
-    double norm = p_norm(0.5,f);
-    std::cout << norm << std::endl;
-
-
-
-
-
-
-
-
     /* Ensure bead ratios are acceptable */
 //    if ((nuc_beads/(2*elec_beads) != 0)  || (nuc_beads/elec_beads == 1) ){
 //        /* Do nothing */
