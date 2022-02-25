@@ -13,6 +13,7 @@
 #include "position_auto_corr.hpp"
 
 int main(int argc, char ** argv) {
+    std::string root = "/Users/ellioteklund/Desktop/mavaric_v2.1/sims/mvrpmd/";
 
     int num_procs = 1; //number of processors program is distributed over
     int my_id = 0; //unique id of each processor
@@ -24,9 +25,6 @@ int main(int argc, char ** argv) {
     MPI_Comm_size(MPI_COMM_WORLD,&num_procs);
 
     MPI_Comm comm = MPI_COMM_WORLD;
-
-    std::cout << "Hello world" << std::endl;
-
 
     /* /////////////////////////////////////////////////// */
                         /* BEGIN PROCESS 1 */
@@ -43,9 +41,7 @@ int main(int argc, char ** argv) {
 
     input_mvrpmd myInput;
 
-    std::string root = "/Users/ellioteklund/Desktop/mavaric_v2.1/sims/mvrpmd/";
-//    //std::string root = "/home/fs01/ece52/MAVARIC-MTS/MAVARIC/sims/mvrpmd/";
-//
+
     int abort = myInput.input_file_handler(root,sys_parameters,elec_parameters,
                                            MC_parameters,Samp_parameters,Dyn_parameters);
 
