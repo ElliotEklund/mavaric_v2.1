@@ -12,22 +12,22 @@ theta_mixed::theta_mixed(int num_states,int nuc_beads, int elec_beads,
     C = &C_In;
     M = &M_In;
     int ratio = nuc_beads/elec_beads;
-    
+
     if (ratio == 0) {
         std::cout << "ERROR: nuc_beads is not divisible by elec_beads." << std::endl;
     }
-    
+
     for (int i=0; i<elec_beads; i++) {
         W(i,i*ratio) = 1.0;
     }
 }
 void theta_mixed::update_gamma_mat(const vector<double> &Q,const matrix<double> &x,
                                    const matrix<double> &p){
-    
+
     Q_trans = prod(W,Q);
     C->update_C_vec(x, p);
     M->update_M_vec(Q_trans);
-        
+
     /* Chain multiplicaton */
     gamma_mat = identity_matrix<std::complex<double> > (num_states);
 
@@ -38,7 +38,7 @@ void theta_mixed::update_gamma_mat(const vector<double> &Q,const matrix<double> 
 }
 void theta_mixed::update_theta(const vector<double> &Q,const matrix<double> &x,
                                const matrix<double> &p){
-    
+
     update_gamma_mat(Q, x, p);
     std::complex<double> tr (0.0,0.0);
     tr = trace<std::complex<double> >(gamma_mat,num_states);
@@ -55,7 +55,7 @@ double theta_mixed::get_signTheta(){return sign(theta);}
 
 double theta_mixed::get_signTheta(const vector<double> &Q,const matrix<double> &x,
                                   const matrix<double> &p){
-    
+
     update_theta(Q,x,p);
     return sign(theta);
 }

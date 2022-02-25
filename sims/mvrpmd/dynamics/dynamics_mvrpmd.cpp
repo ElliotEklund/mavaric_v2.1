@@ -11,7 +11,7 @@ dynamics_mvrpmd::dynamics_mvrpmd(int my_id, int num_procs, int root_proc)
 }
 int dynamics_mvrpmd::pre_comp(){
     int abort = 0;
-    
+
     if (!is_sys_set) {
         abort = -1;
         if (my_id==root_proc) {
@@ -40,61 +40,61 @@ int dynamics_mvrpmd::compute_ac(bool pac, int pac_stride, bool bp,
                                  bool wp,int wp_stride,std::string input_dir,
                                  std::string output_dir,int num_samples,
                                  int num_errors){
-    
+
     if(pre_comp()==-1){
         return -1;
     }
-    
+
     auto_correlation my_ac(my_id,num_procs,root_proc);
     my_ac.set_system(nuc_beads,elec_beads,num_states,mass,
                      beta_nuc_beads,beta_elec_beads,alpha);
-    
+
     my_ac.request_calcs(pac,pac_stride,bp,bp_stride,sp,sp_stride,wp,wp_stride);
     my_ac.set_time(dt,total_time);
-    
+
     my_ac.compute(num_trajs_global,num_trajs_local,input_dir,output_dir,
                   num_samples,num_errors);
-    
+
     return 0;
 }
 
 int dynamics_mvrpmd::energy_conserve(double tol, int energy_stride,
                                       std::string input_dir,
                                       std::string output_dir){
-    
+
     if(pre_comp()==-1){
         return -1;
     }
-    
+
     energy_conserv my_conserv(my_id,num_procs,root_proc);
-    
+
     my_conserv.set_system(nuc_beads,elec_beads,num_states,mass,beta,
                           beta_nuc_beads,beta_elec_beads,alpha);
-    
+
     my_conserv.set_time(dt,total_time);
-    
+
     my_conserv.compute(num_trajs_global,num_trajs_local,tol,energy_stride,
                        input_dir,output_dir);
-    
+
     return 0;
 }
 
 int dynamics_mvrpmd::iPAC(int interval,std::string input_dir,std::string output_dir){
-    
+
     if (my_id == root_proc) {
         std::cout << "HACK ALERT: iPAC calculation only supports even ratios of "
         "num_trajs, interval, and num_procs for the time being." << std::endl;
     }
-    
+
     if(pre_comp()==-1){
         return -1;
     }
-    
+
     init_PAC my_init_PAC(my_id,num_procs,root_proc,num_trajs_global,num_trajs_local);
     my_init_PAC.set_system(nuc_beads,elec_beads,num_states,beta,alpha);
     my_init_PAC.set_interval(interval);
     my_init_PAC.compute(input_dir,output_dir);
-    
+
     return 0;
 }
 void dynamics_mvrpmd::set_system(int nuc_beadsIN, int elec_beadsIN, int num_statesIN,
@@ -117,20 +117,20 @@ void dynamics_mvrpmd::set_time(double dtIN, double total_timeIN){
 }
 void dynamics_mvrpmd::set_trajs(unsigned long long num_trajs_globalIN,
                                 std::string root_path){
-    
+
     num_trajs_global = num_trajs_globalIN;
     num_trajs_local = 0; //number of local trajectories
-    
+
     /* Check for more trajs than procs*/
     if (num_trajs_global < num_procs) {
         if (my_id == root_proc) {
-            std::cout << "ERROR: num_trajs is small than num_procs.!" << std::endl;
+            std::cout << "ERROR: num_trajs is smaller than num_procs.!" << std::endl;
         }
     }
     else{
         unsigned long long d = num_trajs_global/num_procs;
         unsigned long long r = num_trajs_global%num_procs;
-        
+
         if (my_id < num_procs - r) {
             num_trajs_local = d;
         }

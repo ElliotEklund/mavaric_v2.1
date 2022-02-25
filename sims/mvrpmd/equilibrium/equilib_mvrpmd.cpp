@@ -14,7 +14,7 @@ equilib_mvrpmd::equilib_mvrpmd(int my_id, int root_proc, int num_procs,
 }
 int equilib_mvrpmd::run(double nuc_ss, double x_ss, double p_ss,
                          unsigned long long num_steps,unsigned long long stride){
-    
+
     if (!sys_set || !files_set) {
         if (my_id==root_proc) {
             std::cout << "ERROR: equilibrium mvrpmd variables not set!" << std::endl;
@@ -31,22 +31,30 @@ int equilib_mvrpmd::run(double nuc_ss, double x_ss, double p_ss,
     gen_initQ(Q,nuc_beads,nuc_ss);
     gen_initElec(x,elec_beads,num_states,x_ss);
     gen_initElec(p,elec_beads,num_states,p_ss);
-    
+
     //Over-write with saved vectors if requested
     if(readPSV){helper.read_PSV(nuc_beads, elec_beads, num_states, Q, x, p);}
-    
+
     /* Assemble Hamiltonian and Estimator*/
-    //SpringEnergy V_spring(nuc_beads,mass,beta/nuc_beads);
+    SpringEnergy V_spring(nuc_beads,mass,beta/nuc_beads);
     StateIndepPot V0(nuc_beads,mass);
     GTerm G(elec_beads,num_states,alpha);
     C_Matrix C(elec_beads,num_states,alpha);
-    M_Matrix M(num_states,1,beta/elec_beads);
-    theta_Esplit theta(num_states,elec_beads,C,M);
-    theta_Esplit_dBeta dtheta(elec_beads,num_states,beta/elec_beads,C,M);
-    
-    mvrpmd_Esplit_ham H(beta,V0,G,theta);
-    mvrpmd_Esplit_esti Esti(1,beta,V0,theta,dtheta);
-    
+    M_Matrix M(num_states,nuc_beads,beta/elec_beads);
+
+    theta_mixed theta(num_states,nuc_beads,elec_beads,C,M);
+    theta_mixed_dBeta dtheta(elec_beads,num_states,beta/nuc_beads,C,M);
+
+    mvrpmd_mixed_ham H(beta/nuc_beads,V_spring,V0,G,theta);
+    mvrpmd_mixed_esti Esti(nuc_beads,beta/nuc_beads,V_spring,V0,theta,dtheta);
+
+    //
+    // theta_Esplit theta(num_states,elec_beads,C,M);
+    // theta_Esplit_dBeta dtheta(elec_beads,num_states,beta/elec_beads,C,M);
+
+    // mvrpmd_Esplit_ham H(beta,V0,G,theta);
+    // mvrpmd_Esplit_esti Esti(1,beta,V0,theta,dtheta);
+
 //    M_Matrix M2(num_states,nuc_beads,beta/elec_beads);
 //    M_Matrix_MTS M_MTS(nuc_beads,elec_beads,num_states,M2);
 //    Theta_MTS thetaMTS(num_states,elec_beads,C,M_MTS);
@@ -56,7 +64,7 @@ int equilib_mvrpmd::run(double nuc_ss, double x_ss, double p_ss,
 //    MVRPMD_MTS_Hamiltonian H2(beta/nuc_beads,V_spring,V0,G,thetaMTS);
 //    MVRPMD_MTS_Estimator Esti2(nuc_beads,beta/nuc_beads,V_spring,V0,thetaMTS,
 //                         thetaMTS_dBeta);
-    
+
     /* Initialize energy and estimator variables*/
     int esti_samples = 0;
     double estimator_total(0), sgn_total(0);
@@ -82,12 +90,12 @@ int equilib_mvrpmd::run(double nuc_ss, double x_ss, double p_ss,
 
     //r is a ratio that determines how often to sample each sub-system
     double r = double(nuc_beads)/ double(nuc_beads + num_states*elec_beads);
-    
+
 
     std::ofstream progress;
     int ten_p = floor(num_steps/10.0); //ten percent of steps to take
     double get_prog = true;
-    
+
     if (ten_p == 0) {
         get_prog = false;
         if (my_id==root_proc) {
@@ -95,7 +103,7 @@ int equilib_mvrpmd::run(double nuc_ss, double x_ss, double p_ss,
             " because simulation uses small number of steps." <<std::endl;
         }
     }
-    
+
     if (my_id == root_proc) {
         std::string file_name = root_path + "Output/equil_progress";
         progress.open(file_name.c_str());
@@ -120,10 +128,10 @@ int equilib_mvrpmd::run(double nuc_ss, double x_ss, double p_ss,
                 energy = elec_stepper.get_energy();
             }
         }
-        
+
         estimator = Esti.get_estimator(Q,x,p);
         sgnTheta = theta.get_signTheta();
-        
+
         if (is_NaN(estimator)) {
             std::cout << "Bad value for estimator encountered on" << std::endl;
             std::cout << "process " << my_id << " at step " << step << std::endl;
@@ -131,7 +139,7 @@ int equilib_mvrpmd::run(double nuc_ss, double x_ss, double p_ss,
         else{
             estimator_total += estimator;
         }
-        
+
         if (is_NaN(sgnTheta)) {
             std::cout << "Bad value for sgnTheta encountered on" << std::endl;
             std::cout << "process " << my_id << " at step " << step << std::endl;
@@ -139,7 +147,7 @@ int equilib_mvrpmd::run(double nuc_ss, double x_ss, double p_ss,
         else{
             sgn_total += sgnTheta;
         }
-        
+
         if(step % stride == 0){
             estimator_t[esti_samples] = estimator_total/(sgn_total + 1);
             esti_samples += 1;
@@ -152,7 +160,7 @@ int equilib_mvrpmd::run(double nuc_ss, double x_ss, double p_ss,
             }
         }
     }
-    
+
     if (my_id == root_proc) {
         progress.close();
     }
@@ -173,14 +181,14 @@ int equilib_mvrpmd::run(double nuc_ss, double x_ss, double p_ss,
     helper.set_p_ratio(p_steps_total, p_steps_accpt);
     helper.set_average_energy(estimator_total, sgn_total);
     helper.write_estimator(estimator_t,stride);
-    
+
     helper.final_report(nuc_beads,elec_beads,num_states,beta,num_steps,nuc_ss,
                         x_ss,p_ss);
 
     /* Write Monte Carlo information to file if requested*/
     if(writePSV){helper.write_PSV(nuc_beads, elec_beads, num_states, Q, x, p);}
     if (writeData) {helper.write_MC_data(sgn_total, estimator_total);}
-    
+
     return 0;
 }
 void equilib_mvrpmd::gen_initQ(vector<double> &Q, int num_beads, double step_size){

@@ -11,7 +11,7 @@
  If false, an error message will be printed.
 */
 inline bool is_positive(double x, std::string fileName, std::string varName){
-    
+
     if (x < 0){
         std::cout << "ERROR: In file " + fileName + ", " + varName + " must be a positive number."
         " Aborting calculation." << std::endl;
@@ -75,7 +75,6 @@ inline bool is_corrupt(std::string fileName, int correct_num_lines ){
     while(getline(myFile, myLine)){
 
         num_lines += 1;
-
         if(!myLine.empty()){
 
             int foundAt = myLine.find(":"); //location of colon

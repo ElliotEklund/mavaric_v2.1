@@ -40,6 +40,7 @@ add_executable(mvrpmd mvrpmd.cpp
     #dynamics directory
     #${DYNAMICS_DIR}/Dynamics.cpp
     ${DYNAMICS_DIR}/dynamics_mvrpmd.cpp
+    ${DYNAMICS_DIR}/position_auto_corr.cpp
 
     #hamiltonian directory
     ${HAMILTONIAN_DIR}/C_Matrix.cpp

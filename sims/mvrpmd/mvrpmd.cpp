@@ -10,19 +10,22 @@
 #include "trajs_io.hpp"
 #include "aggregate.hpp"
 #include "simpson.hpp"
+#include "position_auto_corr.hpp"
 
 int main(int argc, char ** argv) {
-    
+
     int num_procs = 1; //number of processors program is distributed over
     int my_id = 0; //unique id of each processor
     int root_process = 0; //processor 0 is default root process
-    
+
     MPI_Status status;
     MPI_Init(&argc, &argv);
     MPI_Comm_rank(MPI_COMM_WORLD,&my_id);
     MPI_Comm_size(MPI_COMM_WORLD,&num_procs);
-    
+
     MPI_Comm comm = MPI_COMM_WORLD;
+
+    std::cout << "Hello world" << std::endl;
 
 
     /* /////////////////////////////////////////////////// */
@@ -40,7 +43,7 @@ int main(int argc, char ** argv) {
 
     input_mvrpmd myInput;
 
-    std::string root = "/Users/ellioteklund/Desktop/MAVARIC_v2.0/MAVARIC/sims/mvrpmd/";
+    std::string root = "/Users/ellioteklund/Desktop/mavaric_v2.1/sims/mvrpmd/";
 //    //std::string root = "/home/fs01/ece52/MAVARIC-MTS/MAVARIC/sims/mvrpmd/";
 //
     int abort = myInput.input_file_handler(root,sys_parameters,elec_parameters,
@@ -123,7 +126,7 @@ int main(int argc, char ** argv) {
     beta = 1.0/temp;
     beta_nuc = beta/nuc_beads;
     beta_elec = beta/elec_beads;
-    
+
     /* Ensure bead ratios are acceptable */
 //    if ((nuc_beads/(2*elec_beads) != 0)  || (nuc_beads/elec_beads == 1) ){
 //        /* Do nothing */
@@ -159,7 +162,7 @@ int main(int argc, char ** argv) {
         equilibrator.initialize_files(writePSV,readPSV,writeData,readData);
 
         clock_t start = clock();
-        
+
         equilibrator.run(nuc_ss,x_ss,p_ss,num_steps,esti_rate);
 
         clock_t end = clock();
@@ -168,7 +171,7 @@ int main(int argc, char ** argv) {
         if (my_id == root_process) {
             std::cout << "\t Monte Carlo simulation time: " << time_taken <<
             std::endl << std::endl;
-            
+
             std::cout << "End Monte Carlo Simulation" << std::endl;
             std::cout << std::endl;
         }
@@ -187,7 +190,7 @@ int main(int argc, char ** argv) {
             std::cout << "Begin Sampling Simulation" << std::endl;
             std::cout << std::endl;
         }
-        
+
         sampling_mvrpmd sampler(my_id,root_process,num_procs);
         sampler.initialize_system(nuc_beads,elec_beads,num_states,mass,beta,alpha);
         sampler.initialize_files(readPSV,saveTrajs,root);
@@ -202,7 +205,7 @@ int main(int argc, char ** argv) {
         if (my_id == root_process) {
             std::cout << "\t Sampling simulation time: " << time_taken <<
             std::endl << std::endl;
-            
+
             std::cout << "End Sampling Simulation" << std::endl;
             std::cout << std::endl << std::endl;
         }
@@ -215,7 +218,8 @@ int main(int argc, char ** argv) {
     /* /////////////////////////////////////////////////////////// */
                           /* BEGIN PROCESS 4 */
     /* This process runs the Dynamics simulation if requested.*/
-    
+
+
 
     if(runDyn){
         if (my_id == root_process) {
@@ -223,43 +227,19 @@ int main(int argc, char ** argv) {
             std::cout << std::endl << std::endl;
         }
 
-        /* Setup Dynamics object for simulation. */
-        dynamics_mvrpmd dyn(my_id,num_procs,root_process);
-        
-        dyn.set_system(nuc_beads,elec_beads,num_states,mass,beta,beta_nuc,
-                       beta_elec,alpha);
-        dyn.set_time(dt,total_time);
-        dyn.set_trajs(num_trajs,root);
-
         clock_t start = clock();
 
-        if(run_energ_conserv){
-            energy_stride = 100;
-            dyn.energy_conserve(tol,energy_stride,root + "Output/Trajectories/",
-                               root + "Output/");
-        }
-        if(run_PopAC){
-            bool pac = true;
-            bool bp = true;
-            bool sp = true;
-            bool wp = false;
+        position_auto_corr my_pac(my_id,root_process,num_procs);
+        my_pac.set_system(nuc_beads,elec_beads,num_states,mass,beta_nuc,
+            beta_elec,alpha);
 
-            int pac_stride = 100;
-            int bp_stride = 100;
-            int sp_stride = 100;
-            int wp_stride = 100;
-            int num_samples = 4;
-            int num_errors = 10;
+        my_pac.set_time(dt,total_time);
 
-            dyn.compute_ac(pac,pac_stride,bp,bp_stride,sp,sp_stride,wp,wp_stride,
-                           root + "Output/Trajectories/",root + "Output/",
-                           num_samples,num_errors);
-        }
+        std::string input_dir = root + "Output/Trajectories/";
+        std::string output_dir = root + "Output/";
+        int interval = 100; //interval at which correlation function is written to file
+        my_pac.compute(num_trajs,input_dir,output_dir,interval);
 
-        if(run_init_PAC){
-          dyn.iPAC(interval,root+"Output/Trajectories/",
-                                root+"Output/");
-        }
 
         clock_t end = clock();
         double time_taken = double(end - start) / double(CLOCKS_PER_SEC);
@@ -269,11 +249,11 @@ int main(int argc, char ** argv) {
             std::cout << "End Dynamics Simulation" << std::endl;
         }
     }
-    
+
                             /* END PROCESS 4 */
     /* /////////////////////////////////////////////////////////// */
-    
+
     MPI_Finalize();
-    
+
     return 0;
 }

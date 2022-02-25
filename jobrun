@@ -17,15 +17,15 @@ echo "$USER"
 echo $SLURM_SUBMIT_DIR
 NUMNODES=1
 SIMDIR='/home/fs01/netID/mavaric_v2.1/'
-SIM='rpmd'
+SIM='mvrpmd'
 
 # Make a temp directory
 /usr/bin/mkdir -p /tmp/$USER/$SLURM_JOB_ID
 
 # Copy files to the temp directory
-cp $SLURM_SUBMIT_DIR/bin/rpmd     /tmp/$USER/$SLURM_JOB_ID/.
+cp $SLURM_SUBMIT_DIR/bin/$SIM     /tmp/$USER/$SLURM_JOB_ID/.
 
-mpirun -np $NUMNODES /home/fs01/netID/mavaric_v2.1/bin/rpmd $SIMDIR $SIM
+mpirun -np $NUMNODES /home/fs01/netID/mavaric_v2.1/bin/$SIM $SIMDIR $SIM
 
 # Copy output files back from the temp directory to working directory
 rsync -r /tmp/$USER/$SLURM_JOB_ID/ $SLURM_SUBMIT_DIR/
