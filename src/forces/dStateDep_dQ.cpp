@@ -71,12 +71,12 @@ double dStateDep_dQ::dV12_dQ(const double &Q){
 //
 
 void dStateDep_dQ::update_dVdQ(const vector<double> &Q){
-    
+
    /* Fill dV11_dQ*/
    // for (int bead=0; bead<nuc_beads; bead++) {
    //     dVdQ(bead,0) = dV11_dQ(Q(bead));
    // }
-   // 
+   //
    // /* Fill dV22_dQ*/
    // for (int bead=0; bead<nuc_beads; bead++) {
    //     dVdQ(bead,1) = dV22_dQ(Q(bead));

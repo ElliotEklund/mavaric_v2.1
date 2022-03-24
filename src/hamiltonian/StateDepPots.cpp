@@ -23,7 +23,6 @@ vector<double> StateDepPots::get_V22_vec(const vector<double> &Q){
     std::transform(Q.begin(),Q.end(),V22_vec.begin(),V22());
     return V22_vec;
 }
-
 matrix<double>& StateDepPots::get_V_couple_mat(const double &Q){
     return V_couple_mat;
 }
