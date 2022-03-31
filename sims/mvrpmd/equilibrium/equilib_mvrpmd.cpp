@@ -48,23 +48,6 @@ int equilib_mvrpmd::run(double nuc_ss, double x_ss, double p_ss,
     mvrpmd_mixed_ham H(beta/nuc_beads,V_spring,V0,G,theta);
     mvrpmd_mixed_esti Esti(nuc_beads,beta/nuc_beads,V_spring,V0,theta,dtheta);
 
-    //
-    // theta_Esplit theta(num_states,elec_beads,C,M);
-    // theta_Esplit_dBeta dtheta(elec_beads,num_states,beta/elec_beads,C,M);
-
-    // mvrpmd_Esplit_ham H(beta,V0,G,theta);
-    // mvrpmd_Esplit_esti Esti(1,beta,V0,theta,dtheta);
-
-//    M_Matrix M2(num_states,nuc_beads,beta/elec_beads);
-//    M_Matrix_MTS M_MTS(nuc_beads,elec_beads,num_states,M2);
-//    Theta_MTS thetaMTS(num_states,elec_beads,C,M_MTS);
-//    dTheta_MTS_dBeta thetaMTS_dBeta(nuc_beads,elec_beads,num_states,beta/elec_beads,
-//                                    C,M2,M_MTS);
-//
-//    MVRPMD_MTS_Hamiltonian H2(beta/nuc_beads,V_spring,V0,G,thetaMTS);
-//    MVRPMD_MTS_Estimator Esti2(nuc_beads,beta/nuc_beads,V_spring,V0,thetaMTS,
-//                         thetaMTS_dBeta);
-
     /* Initialize energy and estimator variables*/
     int esti_samples = 0;
     double estimator_total(0), sgn_total(0);
@@ -90,7 +73,6 @@ int equilib_mvrpmd::run(double nuc_ss, double x_ss, double p_ss,
 
     //r is a ratio that determines how often to sample each sub-system
     double r = double(nuc_beads)/ double(nuc_beads + num_states*elec_beads);
-
 
     std::ofstream progress;
     int ten_p = floor(num_steps/10.0); //ten percent of steps to take

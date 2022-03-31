@@ -60,6 +60,8 @@ void position_auto_corr::compute(unsigned long long num_trajs,std::string input_
   int num_samples = num_steps/interval;
 
   matrix<double> cQQ_final(num_trajs,num_samples);
+  matrix<double> sign_final(num_trajs,num_samples);
+
 
   for (int traj=0; traj<num_trajs; traj++){
 
@@ -78,6 +80,7 @@ void position_auto_corr::compute(unsigned long long num_trajs,std::string input_
 
     for (int sample=0; sample<num_samples; sample++){
       cQQ_final(traj,sample) = cQQ;
+      sign_final(traj,sample) = sgnTheta;
 
       for (int step=0; step<interval; step++){
         myABM.take_step(Q_traj, P_traj, x_traj, p_traj);
@@ -86,7 +89,7 @@ void position_auto_corr::compute(unsigned long long num_trajs,std::string input_
       }
     }
   }
-  write_data(cQQ_final,output_dir,num_trajs,interval,num_samples);
+  write_data(cQQ_final,sign_final,output_dir,num_trajs,interval,num_samples);
 }
 void position_auto_corr::set_system(int nuc_beadsIN, int elec_beadsIN,
       int num_statesIN, double massIN, double beta_nuc_beadsIN,
@@ -116,7 +119,8 @@ double position_auto_corr::centroid(const vector<double> & Q){
   return cent;
 }
 void position_auto_corr::write_data(const matrix<double> &cQQ_final,
-    std::string output_dir,int num_trajs,int interval, int num_samples){
+    const matrix<double> &sign_final,std::string output_dir,int num_trajs,
+    int interval, int num_samples){
 
   std::ofstream myFile;
   std::string fileName = output_dir + "position_auto_corr";
@@ -133,6 +137,23 @@ void position_auto_corr::write_data(const matrix<double> &cQQ_final,
     for(int sample=0; sample<num_samples; sample++){
       myFile << cQQ_final(traj,sample) << " ";
     }
+    myFile << std::endl;
+  }
+  myFile.close();
+
+  fileName = output_dir + "sign";
+  myFile.open(fileName.c_str());
+
+  //sign file
+  if (!myFile.is_open()) {
+      std::cout << "ERROR: Could not open " << fileName << std::endl;
+  }
+
+  myFile << "#dt:" << dt << std::endl;
+  myFile << "#num_trajs:" << num_trajs << std::endl;
+
+  for (int traj=0; traj<num_trajs; traj++){
+    myFile << sign_final(traj,0) << " ";
     myFile << std::endl;
   }
   myFile.close();

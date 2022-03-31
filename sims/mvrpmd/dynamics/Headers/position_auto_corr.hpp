@@ -42,8 +42,8 @@ public:
 
     double centroid(const vector<double> & Q);
 
-    void write_data(const matrix<double> &cQQ_final,std::string output_dir,
-      int num_trajs,int interval,int num_samples);
+    void write_data(const matrix<double> &cQQ_final,const matrix<double> &sign_final,
+      std::string output_dir,int num_trajs,int interval,int num_samples);
 
 
 private:
